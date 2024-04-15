@@ -52,8 +52,8 @@ router.get("/logout", async (req, res) => {
     const options = {
       expires: new Date(Date.now()), // Token expiration time (e.g., 90 days)
       httpOnly: true, // Ensures that the cookie is only accessible via HTTP(S) and not JavaScript
-      //   secure: true,
-      //   sameSite: "none",
+      secure: true,
+      sameSite: "none",
     };
     res
       .status(200)
